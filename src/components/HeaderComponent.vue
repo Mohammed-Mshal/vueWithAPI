@@ -2,7 +2,7 @@
   <nav class="navbar">
     <div class="container">
       <div class="navbar-brand">
-        <router-link to="/" class="logo">TodoList</router-link>
+        <router-link to="/" class="logo">Projects</router-link>
         <button class="mobile-menu-btn" @click="toggleMobileMenu">
           <span class="hamburger"></span>
         </button>
@@ -16,7 +16,6 @@
     </div>
   </nav>
 </template>
-
 <script setup>
 import { ref } from 'vue'
 

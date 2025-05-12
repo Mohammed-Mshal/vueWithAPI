@@ -11,5 +11,7 @@ import HeaderComponent from './components/HeaderComponent.vue';
 </template>
 
 <style scoped>
-
+  .main-site{
+    min-height: 100vh;
+  }
 </style>
