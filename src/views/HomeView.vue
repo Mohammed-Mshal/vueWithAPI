@@ -30,7 +30,7 @@ import { useGetUsers } from '@/composable/users';
         {{ error }}
       </div>
       <div class="list-users" v-else>
-        <UserCard v-for="user in users"  @refresh-list="fetchUsers"  :key="user._id" :id="user._id" :name="user.name" :username="user.username" :website="user.website" :phone="user.phone" :email="user.email"/>
+        <UserCard v-for="user in users"  @refresh-list="fetchUsers"  :key="user._id" :image="user.image" :id="user._id" :name="user.name" :username="user.username" :website="user.website" :phone="user.phone" :email="user.email"/>
       </div>
 
     </div>

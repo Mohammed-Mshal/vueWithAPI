@@ -3,6 +3,7 @@
   import emailIcon from '@/assets/images/email.svg'
   import globalIcon from '@/assets/images/global.svg'
   import garbageIcon from '@/assets/images/garbage.svg'
+  import defaultUser from '@/assets/images/defaultUser.png'
   import Toastify from 'toastify-js'
   import axios from 'axios'
   const emit = defineEmits(['refresh-list'])
@@ -31,6 +32,10 @@
       type:String,
       required:true,
     },
+    image:{
+      type:String,
+      required:true
+    }
   })
   const deleteUser=async()=>{
     try {
@@ -92,6 +97,9 @@
 </script>
 <template>
   <div class="card">
+    <div class="image-card">
+      <img :src="props.image||defaultUser" alt="User Image">
+    </div>
     <div class="header-card">
       <h2 class="name">
         {{ props.name }}
@@ -131,6 +139,16 @@
     flex: 1 1 100%;
     &:hover{
       box-shadow: 0 0 18px;
+    }
+    .image-card{
+      height: 200px;
+      width: 100%;
+      margin-bottom: 20px;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
     }
     .header-card{
       display: flex;
